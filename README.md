@@ -21,7 +21,7 @@ This project is a REST API that combines MongoDB with blockchain technology (Eth
 
 1. Clone the repository:
 ```bash
-git clone [REPOSITORY_URL]
+git clone [https://github.com/pacheco94/User-API-with-Blockchain.git]
 ```
 
 2. Install dependencies:
