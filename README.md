@@ -1,103 +1,103 @@
-# API de Usuarios con Blockchain
+# User API with Blockchain
 
-Este proyecto es una API REST que combina MongoDB con tecnología blockchain (Ethereum) para la gestión de usuarios.
+This project is a REST API that combines MongoDB with blockchain technology (Ethereum) for user management.
 
-## Características Principales
+## Main Features
 
-- Integración con MongoDB y Ethereum
-- CRUD completo de usuarios
-- Validación de direcciones de wallet
-- Eventos en blockchain para cada operación
-- API RESTful
+- MongoDB and Ethereum integration
+- Complete user CRUD operations
+- Wallet address validation
+- Blockchain events for each operation
+- RESTful API
 
-## Requisitos Previos
+## Prerequisites
 
 - Node.js
 - MongoDB
-- Cuenta en Ethereum (para pruebas)
-- MetaMask o similar para interacción con blockchain
+- Ethereum account (for testing)
+- MetaMask or similar for blockchain interaction
 
-## Instalación
+## Installation
 
-1. Clonar el repositorio:
+1. Clone the repository:
 ```bash
-git clone [URL_DEL_REPOSITORIO]
+git clone [REPOSITORY_URL]
 ```
 
-2. Instalar dependencias:
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Configurar variables de entorno:
-Crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
+3. Configure environment variables:
+Create a `.env` file in the project root with the following variables:
 ```
 PORT=3000
-MONGODB_URI=tu_uri_de_mongodb
-ETHEREUM_NETWORK=tu_red_ethereum
-CONTRACT_ADDRESS=tu_direccion_del_contrato
+MONGODB_URI=your_mongodb_uri
+ETHEREUM_NETWORK=your_ethereum_network
+CONTRACT_ADDRESS=your_contract_address
 ```
 
-4. Iniciar el servidor:
+4. Start the server:
 ```bash
 npm start
 ```
 
-## Estructura del Proyecto
+## Project Structure
 
 ```
-├── abi/              # Contratos inteligentes
-├── config/           # Configuraciones (DB, blockchain)
-├── controller/       # Lógica de negocio
-├── middleware/       # Middlewares personalizados
-├── model/           # Modelos de MongoDB
-├── routers/         # Rutas de la API
-├── utils/           # Utilidades
-└── server.js        # Punto de entrada
+├── abi/              # Smart contracts
+├── config/           # Configurations (DB, blockchain)
+├── controller/       # Business logic
+├── middleware/       # Custom middlewares
+├── model/           # MongoDB models
+├── routers/         # API routes
+├── utils/           # Utilities
+└── server.js        # Entry point
 ```
 
-## Endpoints de la API
+## API Endpoints
 
-- `GET /api/users/users`: Obtener todos los usuarios
-- `POST /api/users`: Crear nuevo usuario
-- `GET /api/users/:id`: Obtener usuario por ID
-- `PUT /api/users/:id`: Actualizar usuario
-- `DELETE /api/users/:id`: Eliminar usuario
+- `GET /api/users/users`: Get all users
+- `POST /api/users`: Create new user
+- `GET /api/users/:id`: Get user by ID
+- `PUT /api/users/:id`: Update user
+- `DELETE /api/users/:id`: Delete user
 
-## Modelo de Usuario
+## User Model
 
 ```javascript
 {
-    id: String,          // Identificador único
-    name: String,        // Nombre (mínimo 3 caracteres)
-    email: String,       // Email válido
-    addressWallet: String // Dirección de wallet Ethereum
+    id: String,          // Unique identifier
+    name: String,        // Name (minimum 3 characters)
+    email: String,       // Valid email
+    addressWallet: String // Ethereum wallet address
 }
 ```
 
-## Eventos Blockchain
+## Blockchain Events
 
-- `UserCreate`: Emitido al crear un usuario
-- `UserUpdated`: Emitido al actualizar un usuario
-- `UserDeleted`: Emitido al eliminar un usuario
+- `UserCreate`: Emitted when creating a user
+- `UserUpdated`: Emitted when updating a user
+- `UserDeleted`: Emitted when deleting a user
 
-## Tecnologías Utilizadas
+## Technologies Used
 
 - Node.js
 - Express
 - MongoDB
 - Mongoose
 - Ethers.js
-- Solidity (para contratos inteligentes)
+- Solidity (for smart contracts)
 
-## Contribución
+## Contributing
 
-1. Fork el proyecto
-2. Crear una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abrir un Pull Request
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Licencia
+## License
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles. 
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details. 
